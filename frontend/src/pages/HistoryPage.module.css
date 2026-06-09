@@ -1,0 +1,87 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.header { }
+.title { font-size: 28px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--text-secondary); }
+
+.loading, .empty {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 8px; padding: 60px 20px;
+  color: var(--text-secondary); font-size: 15px;
+}
+
+.list { display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border-active); }
+
+.cardHeader {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.question {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 14px; font-weight: 600; color: var(--text-primary);
+  flex: 1; line-height: 1.4;
+}
+
+.meta {
+  display: flex; align-items: center; gap: 10px;
+  flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end;
+}
+.time { font-size: 12px; color: var(--text-muted); }
+.model { font-size: 11px; background: var(--accent-dim); color: var(--accent-light); padding: 2px 8px; border-radius: 10px; }
+.tokens { font-size: 11px; color: var(--text-muted); }
+
+.deleteBtn {
+  background: none; border: none;
+  color: var(--text-muted); padding: 4px;
+  border-radius: 4px; display: flex;
+  transition: all 0.15s;
+}
+.deleteBtn:hover { color: var(--error); background: rgba(239, 68, 68, 0.1); }
+
+.answer {
+  border-top: 1px solid var(--border);
+  padding: 20px;
+  background: var(--bg-secondary);
+}
+
+.answerLabel {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text-muted); margin-bottom: 10px;
+}
+
+.answerContent {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.7;
+}
+.answerContent p { margin-bottom: 8px; }
+.answerContent code {
+  background: var(--bg-card); padding: 2px 6px;
+  border-radius: 4px; font-family: 'Space Mono', monospace;
+  font-size: 12px; color: var(--accent-light);
+}
+
+.sources { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+.sourcesLabel { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.source {
+  display: flex; gap: 8px; align-items: center;
+  font-size: 12px; padding: 4px 0;
+}
+.sourceDoc { color: var(--accent-light); font-weight: 600; }
+.score { color: var(--text-muted); }
+
+.pagination {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; padding: 12px;
+}

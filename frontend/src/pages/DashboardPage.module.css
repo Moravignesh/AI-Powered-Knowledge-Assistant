@@ -1,0 +1,116 @@
+.page { display: flex; flex-direction: column; gap: 28px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title { font-size: 28px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+.name { color: var(--accent-light); }
+.subtitle { font-size: 14px; color: var(--text-secondary); }
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.2s;
+}
+.statCard:hover { border-color: var(--border-active); transform: translateY(-2px); }
+
+.statIcon {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.statValue { font-size: 32px; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+.statLabel { font-size: 13px; color: var(--text-secondary); font-weight: 600; }
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .bottom { grid-template-columns: 1fr; }
+}
+
+.recentCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.cardHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cardHeader h2 { font-size: 16px; font-weight: 700; }
+.seeAll {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 13px; color: var(--accent-light);
+  text-decoration: none; font-weight: 600;
+}
+
+.empty {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 40px 20px; color: var(--text-secondary); font-size: 14px;
+}
+
+.conversationList { display: flex; flex-direction: column; gap: 2px; }
+
+.conversationItem {
+  padding: 12px;
+  border-radius: var(--radius);
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  transition: background 0.15s;
+}
+.conversationItem:hover { background: var(--bg-card-hover); }
+
+.question {
+  font-size: 13px; color: var(--text-primary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 300px;
+}
+.time { font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+.quickActions {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.action {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.15s;
+  margin-bottom: 4px;
+}
+.action:hover { background: var(--bg-card-hover); }
+
+.actionIcon {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--accent-dim);
+  color: var(--accent-light);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.actionTitle { font-size: 13px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+.actionDesc { font-size: 11px; color: var(--text-muted); }
